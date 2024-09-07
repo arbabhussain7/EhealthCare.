@@ -33,7 +33,7 @@ class _AccountDetailState extends State<AccountDetail> {
                       onTap: () {
                         Get.back();
                       },
-                      child: Icon(Icons.arrow_back_ios)),
+                      child: const Icon(Icons.arrow_back_ios)),
                   Text(
                     "Account Information",
                     style: GoogleFonts.urbanist(
@@ -43,12 +43,12 @@ class _AccountDetailState extends State<AccountDetail> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.to(() => EditAccount());
+                      Get.to(() => const EditAccount());
                     },
                     child: Container(
                         width: 42.w,
                         height: 42.h,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: softGreyColor, shape: BoxShape.circle),
                         child: Image.asset("assets/images/edit-icon.png")),
                   )

@@ -29,14 +29,14 @@ class _EmailOTPState extends State<EmailOTP> {
                   onPressed: () {
                     Get.back();
                   },
-                  icon: Icon(Icons.arrow_back_ios),
+                  icon: const Icon(Icons.arrow_back_ios),
                 )),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 122, right: 192),
               child: Container(
-                child: Text(
+                child: const Text(
                   "Verify Code!",
                   style: TextStyle(
                       fontSize: 24,
@@ -66,7 +66,7 @@ class _EmailOTPState extends State<EmailOTP> {
             Padding(
               padding: const EdgeInsets.only(top: 27, right: 225),
               child: Container(
-                child: Text(
+                child: const Text(
                   "Verification Code",
                   style: TextStyle(fontSize: 13, color: Colors.black),
                 ),
@@ -113,7 +113,7 @@ class _EmailOTPState extends State<EmailOTP> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      child: Text(
+                      child: const Text(
                         "Resend code in",
                         style: TextStyle(
                             fontSize: 13,
@@ -121,7 +121,7 @@ class _EmailOTPState extends State<EmailOTP> {
                       ),
                     ),
                     Container(
-                      child: Text(
+                      child: const Text(
                         "40s",
                         style: TextStyle(color: Colors.black, fontSize: 25),
                       ),
@@ -136,7 +136,7 @@ class _EmailOTPState extends State<EmailOTP> {
             CustomButton(
                 text: 'Continue',
                 onPressed: () {
-                  Get.to(() => ResetPassword());
+                  Get.to(() => const ResetPassword());
                 })
           ],
         ),

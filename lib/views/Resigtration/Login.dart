@@ -70,7 +70,7 @@ class _SigninState extends State<Signin> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
+                        SizedBox(
                           width: 20.w,
                           height: 20.h,
                           child: Image.asset("assets/images/Google.png"),
@@ -98,7 +98,7 @@ class _SigninState extends State<Signin> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(child: Divider(color: silverColor)),
+                      const Expanded(child: Divider(color: silverColor)),
                       SizedBox(
                         width: 4.w,
                       ),
@@ -112,7 +112,7 @@ class _SigninState extends State<Signin> {
                       SizedBox(
                         width: 4.w,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Divider(color: silverColor),
                       ),
                     ],
@@ -121,13 +121,13 @@ class _SigninState extends State<Signin> {
                 CustomTextfield(
                   controller: emailController,
                   text: "Type of your email",
-                  prefixIcons: Icon(Icons.email_outlined),
+                  prefixIcons: const Icon(Icons.email_outlined),
                   // icons: Icon(Icons.email
                   // ),
                 ),
                 CustomTextfield(
                   controller: passwordController,
-                  prefixIcons: Icon(Icons.lock_outline),
+                  prefixIcons: const Icon(Icons.lock_outline),
                   text: "Type your password",
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -146,7 +146,7 @@ class _SigninState extends State<Signin> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Get.to(() => EmailResend());
+                        Get.to(() => const EmailResend());
                       },
                       child: Text(
                         "Forgot Password",
@@ -222,7 +222,7 @@ class _SigninState extends State<Signin> {
                       // if (key!.currentState!.validate()) {
                       //   Get.to(() => BottomNavBar());
                       // }
-                      Get.to(BottomNavBar());
+                      Get.to(const BottomNavBar());
                     }),
                 SizedBox(
                   height: 30.h,
@@ -234,7 +234,7 @@ class _SigninState extends State<Signin> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            child: Text(
+                            child: const Text(
                               "Don’t have account?",
                               style: TextStyle(
                                   fontSize: 15, color: greyAccentColor),
@@ -242,7 +242,7 @@ class _SigninState extends State<Signin> {
                           ),
                           InkWell(
                             onTap: () {
-                              Get.to(() => AiRecommendation());
+                              Get.to(() => const AiRecommendation());
                             },
                             child: Text(
                               "Sign Up",

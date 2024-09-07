@@ -41,11 +41,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Container(
                     width: 42.w,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     height: 42.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: silverColor),
-                    child: SvgIcon("assets/icons/notification-icon.svg"),
+                    child: const SvgIcon("assets/icons/notification-icon.svg"),
                   )
                 ],
               ),
@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: cyanColor,
                     borderRadius: BorderRadius.circular(12.r)),
                 child: ListTile(
-                  leading: CircleAvatar(
+                  leading: const CircleAvatar(
                     backgroundImage: AssetImage("assets/images/patient.png"),
                   ),
                   title: Text(
@@ -91,7 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(() => AccountDetail());
+                  Get.to(() => const AccountDetail());
                 },
                 child: ListTile(
                   leading: Image.asset("assets/images/user-icon.png"),
@@ -116,10 +116,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 onTap: () {
-                  Get.to(() => SettingScreen());
+                  Get.to(() => const SettingScreen());
                 },
                 child: ListTile(
                   leading: Image.asset("assets/images/setting-icon.png"),
@@ -144,10 +144,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 onTap: () {
-                  Get.to(() => PrivacyPolicy());
+                  Get.to(() => const PrivacyPolicy());
                 },
                 child: ListTile(
                   leading: Image.asset("assets/images/medicine-icon.png"),
@@ -172,16 +172,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 onTap: () {},
                 child: ListTile(
                   leading: Container(
                     width: 40.w,
                     height: 40.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: softGreyColor),
-                    child: Icon(
+                    child: const Icon(
                       Icons.logout,
                       color: redColor,
                     ),
@@ -207,7 +207,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
             ],
           ),
         ),

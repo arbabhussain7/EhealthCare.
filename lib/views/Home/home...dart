@@ -20,19 +20,19 @@ class _homescreen1State extends State<homescreen1> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 59, left: 24),
-                    child: Container(
+                    child: SizedBox(
                         width: 42,
                         height: 42,
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           backgroundImage: AssetImage("Image/patient.png"),
                         )),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 64, left: 344),
-                    child: Container(
+                    child: SizedBox(
                         width: 44,
                         height: 44,
-                        child: Icon(
+                        child: const Icon(
                           Icons.notifications_none_outlined,
                           size: 33,
                         )),
@@ -75,11 +75,11 @@ class _homescreen1State extends State<homescreen1> {
                 height: 48,
                 decoration: BoxDecoration(
                     // border: Border.all(),
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          const Color.fromARGB(255, 31, 107, 117),
+                          Color.fromARGB(255, 31, 107, 117),
                           // Color.fromARGB(255, 14, 152, 170),
                           Colors.cyan,
                           Colors.cyan,
@@ -91,7 +91,7 @@ class _homescreen1State extends State<homescreen1> {
                     Padding(
                       padding: const EdgeInsets.only(left: 12),
                       child: Container(
-                        child: Icon(
+                        child: const Icon(
                           Icons.find_replace_sharp,
                           size: 22,
                           color: Colors.white,
@@ -101,7 +101,7 @@ class _homescreen1State extends State<homescreen1> {
                     Container(
                         child: TextButton(
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               "Find Doctor ",
                               style: TextStyle(
                                   color: Colors.white,
@@ -119,7 +119,7 @@ class _homescreen1State extends State<homescreen1> {
                 height: 176,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(13),
-                    color: Color.fromARGB(255, 245, 244, 244)),
+                    color: const Color.fromARGB(255, 245, 244, 244)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -263,7 +263,7 @@ class _homescreen1State extends State<homescreen1> {
                 width: 335,
                 height: 111,
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 255, 255, 1),
+                    color: const Color.fromRGBO(255, 255, 255, 1),
                     // border: Border.all(),
                     borderRadius: BorderRadius.circular(7)),
                 child: Stack(children: [
@@ -278,7 +278,7 @@ class _homescreen1State extends State<homescreen1> {
                   Padding(
                     padding: const EdgeInsets.only(top: 23, left: 68),
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         "Dr. Nirmala Azalea",
                         style: TextStyle(
                             fontSize: 16,
@@ -290,7 +290,7 @@ class _homescreen1State extends State<homescreen1> {
                   Padding(
                     padding: const EdgeInsets.only(top: 43, left: 68),
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         "Orthopedic",
                         style: TextStyle(
                             fontSize: 14,
@@ -305,21 +305,21 @@ class _homescreen1State extends State<homescreen1> {
                       width: 146,
                       height: 24,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(228, 248, 250, 1),
+                          color: const Color.fromRGBO(228, 248, 250, 1),
                           // border: Border.all(),
                           borderRadius: BorderRadius.circular(2)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            child: Icon(
+                            child: const Icon(
                               Icons.access_time,
                               size: 18,
                               color: Color.fromRGBO(37, 124, 255, 1),
                             ),
                           ),
                           Container(
-                            child: Text(
+                            child: const Text(
                               "Wed Jun 20",
                               style: TextStyle(
                                   fontSize: 14,
@@ -328,7 +328,7 @@ class _homescreen1State extends State<homescreen1> {
                             ),
                           ),
                           Container(
-                            child: Text(
+                            child: const Text(
                               "8:00",
                               style: TextStyle(
                                   fontSize: 14,
@@ -377,32 +377,32 @@ class _homescreen1State extends State<homescreen1> {
       // ]),
 
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         color: Colors.white,
         child: IconTheme(
-          data: IconThemeData(
-              color: const Color.fromARGB(255, 88, 86, 86), size: 32),
+          data: const IconThemeData(
+              color: Color.fromARGB(255, 88, 86, 86), size: 32),
           child: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.home_sharp),
+                  icon: const Icon(Icons.home_sharp),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.article_rounded),
+                  icon: const Icon(Icons.article_rounded),
                 ),
-                SizedBox(width: 18),
+                const SizedBox(width: 18),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.message),
+                  icon: const Icon(Icons.message),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.account_circle_outlined),
+                  icon: const Icon(Icons.account_circle_outlined),
                 ),
               ],
             ),

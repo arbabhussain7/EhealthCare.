@@ -36,9 +36,9 @@ class MessageScreen extends StatelessWidget {
                   Container(
                     width: 42.w,
                     height: 42.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: silverColor, shape: BoxShape.circle),
-                    child: Icon(
+                    child: const Icon(
                       Icons.add,
                       color: blackColor,
                     ),
@@ -46,10 +46,11 @@ class MessageScreen extends StatelessWidget {
                   Container(
                       width: 42.w,
                       height: 42.h,
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(8),
+                      decoration: const BoxDecoration(
                           color: silverColor, shape: BoxShape.circle),
-                      child: SvgIcon("assets/icons/notification-icon.svg")),
+                      child:
+                          const SvgIcon("assets/icons/notification-icon.svg")),
                 ],
               ),
             ),
@@ -58,14 +59,14 @@ class MessageScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 265.w,
                     height: 48.h,
                     child: TextFormField(
                       style: GoogleFonts.urbanist(
                           fontSize: 17.sp, color: textColor),
                       decoration: InputDecoration(
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.search,
                             size: 34,
                             color: textColor,
@@ -80,10 +81,10 @@ class MessageScreen extends StatelessWidget {
                   Container(
                     width: 42.w,
                     height: 42.h,
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(8),
+                    decoration: const BoxDecoration(
                         color: silverColor, shape: BoxShape.circle),
-                    child: SvgIcon("assets/icons/filter-icon.svg"),
+                    child: const SvgIcon("assets/icons/filter-icon.svg"),
                   )
                 ],
               ),
@@ -94,10 +95,10 @@ class MessageScreen extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () {
-                        Get.to(() => TextMessage());
+                        Get.to(() => const TextMessage());
                       },
                       child: ListTile(
-                        leading: CircleAvatar(
+                        leading: const CircleAvatar(
                           backgroundImage:
                               AssetImage("assets/images/doctor-warda.png"),
                         ),
@@ -124,7 +125,7 @@ class MessageScreen extends StatelessWidget {
                     );
                   },
                   separatorBuilder: (context, index) {
-                    return Divider();
+                    return const Divider();
                   },
                   itemCount: 15),
             )

@@ -59,7 +59,7 @@ class _SigninState extends State<SignUp> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      SizedBox(
                         width: 20.w,
                         height: 20.h,
                         child: Image.asset("assets/images/Google.png"),
@@ -87,7 +87,7 @@ class _SigninState extends State<SignUp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(child: Divider(color: silverColor)),
+                    const Expanded(child: Divider(color: silverColor)),
                     SizedBox(
                       width: 4.w,
                     ),
@@ -101,7 +101,7 @@ class _SigninState extends State<SignUp> {
                     SizedBox(
                       width: 4.w,
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Divider(color: silverColor),
                     ),
                   ],
@@ -110,17 +110,17 @@ class _SigninState extends State<SignUp> {
               CustomTextfield(
                 text: "Type your username",
                 controller: usernameController,
-                prefixIcons: Icon(Icons.person_outlined),
+                prefixIcons: const Icon(Icons.person_outlined),
               ),
               CustomTextfield(
                 text: "Type your  email",
                 controller: emailController,
-                prefixIcons: Icon(Icons.email_outlined),
+                prefixIcons: const Icon(Icons.email_outlined),
               ),
               CustomTextfield(
                 controller: passwordController,
                 text: "Type your password",
-                prefixIcons: Icon(
+                prefixIcons: const Icon(
                   Icons.lock_outline,
                   color: blackAccColor,
                 ),
@@ -179,7 +179,7 @@ class _SigninState extends State<SignUp> {
               CustomButton(
                 text: "Sign Up",
                 onPressed: () {
-                  Get.to(() => OTPAddress());
+                  Get.to(() => const OTPAddress());
                 },
               ),
               SizedBox(
@@ -199,7 +199,7 @@ class _SigninState extends State<SignUp> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.to(() => Signin());
+                      Get.to(() => const Signin());
                     },
                     child: Text(
                       "Sign In",

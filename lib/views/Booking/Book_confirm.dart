@@ -34,7 +34,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                         onTap: () {
                           Get.back();
                         },
-                        child: Icon(Icons.arrow_back_ios)),
+                        child: const Icon(Icons.arrow_back_ios)),
                     Text(
                       "Booking Detail",
                       style: GoogleFonts.urbanist(
@@ -42,7 +42,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                           fontWeight: FontWeight.w700,
                           color: textColor),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.transparent,
                     )
@@ -91,7 +91,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                     color: Colors.grey.withOpacity(0.1),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: Offset(3, 3), // changes position of shadow
+                    offset: const Offset(3, 3), // changes position of shadow
                   ),
                 ],
               ),
@@ -132,7 +132,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
             Container(
               width: 335.w,
               height: 230.h,
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                   color: silverColor, borderRadius: BorderRadius.circular(5.r)),
               child: Column(
@@ -141,11 +141,11 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                     leading: Container(
                         width: 42.w,
                         height: 42.h,
-                        padding: EdgeInsets.all(6.0),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(6.0),
+                        decoration: const BoxDecoration(
                             color: whiteColor, // border: Border.all(),
                             shape: BoxShape.circle),
-                        child: SvgIcon("assets/icons/calender-icon.svg")),
+                        child: const SvgIcon("assets/icons/calender-icon.svg")),
                     title: Text(
                       "Date & Time",
                       style: GoogleFonts.urbanist(
@@ -164,17 +164,17 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.w),
-                    child: Divider(),
+                    child: const Divider(),
                   ),
                   ListTile(
                     leading: Container(
                         width: 42.w,
                         height: 42.h,
-                        padding: EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: const BoxDecoration(
                             color: greenColor, // border: Border.all(),
                             shape: BoxShape.circle),
-                        child: SvgIcon(
+                        child: const SvgIcon(
                           "assets/icons/video-type-icon.svg",
                           color: whiteColor,
                         )),
@@ -197,6 +197,11 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                         ),
                         ElevatedButton(
                           onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(2)),
+                              backgroundColor: cyanColor,
+                              minimumSize: Size(130.w, 30.h)),
                           child: Text(
                             "Enter Waiting Room",
                             style: GoogleFonts.urbanist(
@@ -204,11 +209,6 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                                 fontWeight: FontWeight.w600,
                                 color: whiteColor),
                           ),
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(2)),
-                              backgroundColor: cyanColor,
-                              minimumSize: Size(130.w, 30.h)),
                         )
                       ],
                     ),
@@ -228,7 +228,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                   color: textColor),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage(
                   "assets/images/doctor-nirmala.png",
                 ),

@@ -15,8 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 2), () {
-      Get.to(() => Signin());
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const Signin());
     });
   }
 
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Color.fromARGB(255, 240, 229, 229),
             ])),
         child: Center(
-          child: Container(
+          child: SizedBox(
             height: 321,
             width: 322,
             child: Image.asset("assets/images/Logo.png"),

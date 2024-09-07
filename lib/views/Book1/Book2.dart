@@ -26,7 +26,7 @@ class _BookingStepTwoState extends State<BookingStepTwo> {
             children: [
               IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_ios,
                     color: blackColor,
                   )),
@@ -77,7 +77,7 @@ class _BookingStepTwoState extends State<BookingStepTwo> {
               SizedBox(
                 height: 12.h,
               ),
-              Divider(
+              const Divider(
                 endIndent: 8,
                 color: silverColor,
               ),
@@ -329,7 +329,7 @@ class _BookingStepTwoState extends State<BookingStepTwo> {
               CustomButton(
                   text: "Continue",
                   onPressed: () {
-                    Get.to(() => BookingStepThree());
+                    Get.to(() => const BookingStepThree());
                   })
             ],
           ),

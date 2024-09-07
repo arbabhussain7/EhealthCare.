@@ -19,11 +19,11 @@ class _TextMessageState extends State<TextMessage> {
         backgroundColor: whiteColor,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
           color: blackColor,
         ),
         title: ListTile(
-          leading: CircleAvatar(
+          leading: const CircleAvatar(
             backgroundImage: AssetImage("assets/images/doctor-warda.png"),
           ),
           title: Text(
@@ -56,19 +56,19 @@ class _TextMessageState extends State<TextMessage> {
                   filled: true,
                   fillColor: whiteColor,
                   prefixIcon: Container(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     width: 14.w,
                     height: 14.h,
                     child: InkWell(
                       onTap: () {},
-                      child: SvgIcon(
+                      child: const SvgIcon(
                         "assets/icons/paperclip-icon.svg",
                       ),
                     ),
                   ),
                   suffixIcon: IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.send,
                         color: cyanColor,
                       )),
@@ -77,8 +77,8 @@ class _TextMessageState extends State<TextMessage> {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
                       color: greyColor),
-                  border: OutlineInputBorder(),
-                  focusedBorder: OutlineInputBorder(
+                  border: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: greyColor))),
             ),
           ],

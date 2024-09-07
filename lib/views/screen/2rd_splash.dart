@@ -15,8 +15,8 @@ class _SecondSplashState extends State<SecondSplash> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: SizedBox(
                 width: 190,
                 height: 120,
                 child: Image.asset("Image/Logo.png"),
@@ -26,7 +26,7 @@ class _SecondSplashState extends State<SecondSplash> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(right: 150),
-                  child: Container(
+                  child: SizedBox(
                       height: 400,
                       width: 450,
                       child: Image.asset("Image/Splashimg.png")),

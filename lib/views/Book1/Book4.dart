@@ -139,12 +139,12 @@ class _BookingStepFourState extends State<BookingStepFour> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
+        color: whiteColor,
         child: CustomButton(
             text: "Continue",
             onPressed: () {
               Get.to(() => BookingStepFive());
             }),
-        color: whiteColor,
       ),
     );
   }

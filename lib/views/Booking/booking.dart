@@ -21,14 +21,14 @@ class _bookingState extends State<booking> {
                   Container(
                     child: IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.arrow_back_ios_new),
+                      icon: const Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 83,
                   ),
                   Container(
-                    child: Text(
+                    child: const Text(
                       "Booking Detail",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
@@ -44,7 +44,7 @@ class _bookingState extends State<booking> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                          child: Text(
+                          child: const Text(
                         "Booking Info",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w700),
@@ -53,10 +53,10 @@ class _bookingState extends State<booking> {
                         width: 114,
                         height: 24,
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(128, 141, 158, 1),
+                            color: const Color.fromRGBO(128, 141, 158, 1),
                             borderRadius: BorderRadius.circular(4)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 2, left: 5),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 2, left: 5),
                           child: Text(
                             "Pending Payment",
                             style: TextStyle(
@@ -75,7 +75,7 @@ class _bookingState extends State<booking> {
                 width: 335,
                 height: 206,
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(248, 248, 251, 1),
+                    color: const Color.fromRGBO(248, 248, 251, 1),
                     // border: Border.all(),
                     borderRadius: BorderRadius.circular(12)),
                 child: Column(
@@ -92,12 +92,12 @@ class _bookingState extends State<booking> {
                                   borderRadius: BorderRadius.circular(22)),
                               width: 42,
                               height: 42,
-                              child: Icon(Icons.credit_card)),
+                              child: const Icon(Icons.credit_card)),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 23, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "Date & Time",
                               style: TextStyle(
                                   fontSize: 14,
@@ -109,7 +109,7 @@ class _bookingState extends State<booking> {
                         Padding(
                           padding: const EdgeInsets.only(top: 43, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "Monday, 20 Jun 2022",
                               style: TextStyle(
                                   fontSize: 14,
@@ -121,7 +121,7 @@ class _bookingState extends State<booking> {
                         Padding(
                           padding: const EdgeInsets.only(top: 63, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "08:00 AM",
                               style: TextStyle(
                                   fontSize: 14,
@@ -132,8 +132,8 @@ class _bookingState extends State<booking> {
                         ),
                       ]),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 22),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 22),
                       child: Divider(
                         endIndent: 18,
                       ),
@@ -144,12 +144,12 @@ class _bookingState extends State<booking> {
                           padding: const EdgeInsets.only(top: 23, left: 15),
                           child: Container(
                               decoration: BoxDecoration(
-                                  color: Color.fromRGBO(72, 189, 105, 1),
+                                  color: const Color.fromRGBO(72, 189, 105, 1),
                                   // border: Border.all(),
                                   borderRadius: BorderRadius.circular(22)),
                               width: 42,
                               height: 42,
-                              child: Icon(
+                              child: const Icon(
                                 Icons.airline_stops_sharp,
                                 color: Colors.white,
                               )),
@@ -157,7 +157,7 @@ class _bookingState extends State<booking> {
                         Padding(
                           padding: const EdgeInsets.only(top: 23, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "Appointment Type",
                               style: TextStyle(
                                   fontSize: 14,
@@ -169,7 +169,7 @@ class _bookingState extends State<booking> {
                         Padding(
                           padding: const EdgeInsets.only(top: 43, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "Video Call",
                               style: TextStyle(
                                   fontSize: 14,
@@ -181,7 +181,7 @@ class _bookingState extends State<booking> {
                         Padding(
                           padding: const EdgeInsets.only(top: 63, left: 68),
                           child: Container(
-                            child: Text(
+                            child: const Text(
                               "None",
                               style: TextStyle(
                                   fontSize: 14,
@@ -199,7 +199,7 @@ class _bookingState extends State<booking> {
             Padding(
               padding: const EdgeInsets.only(right: 252),
               child: Container(
-                child: Text(
+                child: const Text(
                   "Doctor Info",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
@@ -211,7 +211,7 @@ class _bookingState extends State<booking> {
                 width: 335,
                 height: 111,
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 255, 255, 1),
+                    color: const Color.fromRGBO(255, 255, 255, 1),
                     // border: Border.all(),
                     borderRadius: BorderRadius.circular(7)),
                 child: Stack(children: [
@@ -228,7 +228,7 @@ class _bookingState extends State<booking> {
                   Padding(
                     padding: const EdgeInsets.only(top: 23, left: 48),
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         "Dr. Nirmala Azalea",
                         style: TextStyle(
                             fontSize: 16,
@@ -240,7 +240,7 @@ class _bookingState extends State<booking> {
                   Padding(
                     padding: const EdgeInsets.only(top: 43, left: 48),
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         "Surgery",
                         style: TextStyle(
                             fontSize: 14,
@@ -252,7 +252,7 @@ class _bookingState extends State<booking> {
                 ]),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 152,
             ),
             Padding(
@@ -262,14 +262,14 @@ class _bookingState extends State<booking> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        child: Text(
+                        child: const Text(
                           "Total Price",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w700),
                         ),
                       ),
                       Container(
-                        child: Text(
+                        child: const Text(
                           "Rs. 1220",
                           style: TextStyle(
                               fontSize: 26, fontWeight: FontWeight.w700),
@@ -278,24 +278,24 @@ class _bookingState extends State<booking> {
                     ]),
               ),
             ),
-            Container(
+            SizedBox(
               width: 365,
               height: 48,
               child: ElevatedButton(
                   onPressed: () {},
-                  child: Text(
-                    "Pay Now",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700),
-                  ),
                   style: ElevatedButton.styleFrom(
                     // primary: Colors.cyan, // background color
                     // onPrimary: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(2), // button's shape
                     ),
+                  ),
+                  child: Text(
+                    "Pay Now",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700),
                   )),
             )
           ],

@@ -12,14 +12,14 @@ class _notificationsState extends State<notifications> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Container(
+      body: SizedBox(
         width: 341,
         height: 770,
         child: Column(
           children: [
             Container(
-              decoration: BoxDecoration(color: Colors.white),
-              child: Text(
+              decoration: const BoxDecoration(color: Colors.white),
+              child: const Text(
                 "Notification",
                 style: TextStyle(
                   fontSize: 20,

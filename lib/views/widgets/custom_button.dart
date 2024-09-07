@@ -16,18 +16,13 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
-      child: Container(
+      child: SizedBox(
         width: 334,
         height: 48,
         child: ElevatedButton(
           onPressed: () {
             onPressed();
           },
-          child: Text(text,
-              style: GoogleFonts.urbanist(
-                  color: whiteColor,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w700)),
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(2), // button's shape
@@ -36,6 +31,11 @@ class CustomButton extends StatelessWidget {
             // text color
             elevation: 5, // button's elevation when it's pressed
           ),
+          child: Text(text,
+              style: GoogleFonts.urbanist(
+                  color: whiteColor,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w700)),
         ),
       ),
     );

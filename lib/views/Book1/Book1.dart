@@ -31,7 +31,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                     onPressed: () {
                       Get.back();
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                       size: 32,
                     )),
@@ -45,7 +45,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                       fontSize: 24.sp,
                       fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 57,
                 ),
                 Text(
@@ -72,7 +72,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                             fontSize: 14.sp,
                             color: greyColor,
                             fontWeight: FontWeight.w400),
-                        prefixIcon: Icon(Icons.search)),
+                        prefixIcon: const Icon(Icons.search)),
                   ),
                 ),
                 SizedBox(
@@ -82,7 +82,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                   height: 682.h,
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() => BookingStepTwo());
+                      Get.to(() => const BookingStepTwo());
                     },
                     child: ListView.separated(
                       itemCount: 15,
@@ -104,7 +104,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                                     fontWeight: FontWeight.w400,
                                     color: greyColor),
                               ),
-                              leading: CircleAvatar(
+                              leading: const CircleAvatar(
                                 backgroundImage:
                                     AssetImage("assets/images/doctor.png"),
                               ),
@@ -128,7 +128,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                                     allowHalfRating: true,
                                     itemCount: 5,
                                     itemSize: 12,
-                                    itemBuilder: (context, _) => Icon(
+                                    itemBuilder: (context, _) => const Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
@@ -153,7 +153,7 @@ class _BookingsteponeState extends State<Bookingstepone> {
                         );
                       },
                       separatorBuilder: (BuildContext, index) {
-                        return Divider();
+                        return const Divider();
                       },
                     ),
                   ),

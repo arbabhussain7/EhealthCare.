@@ -38,7 +38,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           onTap: () {
                             Get.back();
                           },
-                          child: Icon(Icons.arrow_back_ios)),
+                          child: const Icon(Icons.arrow_back_ios)),
                       Text(
                         "Settings",
                         style: GoogleFonts.montserrat(
@@ -46,7 +46,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             fontWeight: FontWeight.w700,
                             color: textColor),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_back_ios,
                         color: Colors.transparent,
                       ),
@@ -80,7 +80,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           isSwitches = value;
                         });
                       })),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               ListTile(
@@ -97,7 +97,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   height: 10.h,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               SizedBox(
@@ -113,12 +113,12 @@ class _SettingScreenState extends State<SettingScreen> {
                       color: greyColor),
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               InkWell(
                 onTap: () {
-                  Get.to(() => PrivacyPolicy());
+                  Get.to(() => const PrivacyPolicy());
                 },
                 child: ListTile(
                   title: Text(
@@ -135,7 +135,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               ListTile(
@@ -152,7 +152,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   height: 10.h,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               ListTile(
@@ -169,7 +169,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   height: 10.h,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               ListTile(
@@ -186,7 +186,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   height: 10.h,
                 ),
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
             ],

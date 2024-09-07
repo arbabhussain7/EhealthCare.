@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -30,7 +29,7 @@ class _AccountVerifyState extends State<AccountVerify> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(107.r),
                   color: whiteColor.withOpacity(0.3)),
-              child: Icon(
+              child: const Icon(
                 Icons.check,
                 color: whiteColor,
                 size: 63,
@@ -67,28 +66,28 @@ class _AccountVerifyState extends State<AccountVerify> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: SizedBox(
                 width: 334.w,
                 height: 48.h,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(() => Signin());
+                    Get.to(() => const Signin());
                   },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(2.r), // button's shape
+                    ),
+                    backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+                    // text color
+                    elevation: 5, // button's elevation when it's pressed
+                  ),
                   child: Text(
                     "Get Started",
                     style: TextStyle(
                         color: Colors.cyan,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w700),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(2.r), // button's shape
-                    ),
-                    backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-                    // text color
-                    elevation: 5, // button's elevation when it's pressed
                   ),
                 ),
               ),

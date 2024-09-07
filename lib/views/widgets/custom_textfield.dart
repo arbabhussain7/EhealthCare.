@@ -38,8 +38,8 @@ class _CustomTextfieldState extends State<CustomTextfield> {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 6.h),
       child: Container(
-        decoration:
-            BoxDecoration(border: Border(bottom: BorderSide(color: greyColor))),
+        decoration: const BoxDecoration(
+            border: Border(bottom: BorderSide(color: greyColor))),
         child: TextFormField(
           controller: widget.controller,
           obscureText: widget.obscureText,
@@ -66,8 +66,8 @@ class _CustomTextfieldState extends State<CustomTextfield> {
                       print(widget.secureText);
                     },
                     child: widget.secureText
-                        ? Icon(Icons.visibility)
-                        : Icon(Icons.visibility_off),
+                        ? const Icon(Icons.visibility)
+                        : const Icon(Icons.visibility_off),
                   )
                 : null,
           ),

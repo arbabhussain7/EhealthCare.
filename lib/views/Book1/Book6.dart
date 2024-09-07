@@ -31,17 +31,17 @@ class _BookingStepSixState extends State<BookingStepSix> {
                   Container(
                     width: 146.w,
                     height: 146.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: greenAccentColor,
                     ),
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: Container(
                       width: 106.w,
                       height: 106.h,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle, color: greenColor),
-                      child: Icon(
+                      child: const Icon(
                         size: 52,
                         Icons.check,
                         color: whiteColor,
@@ -104,7 +104,7 @@ class _BookingStepSixState extends State<BookingStepSix> {
               CustomButton(
                   text: "Back to Home",
                   onPressed: () {
-                    Get.to(() => BottomNavBar());
+                    Get.to(() => const BottomNavBar());
                   })
             ],
           ),

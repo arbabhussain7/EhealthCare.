@@ -36,17 +36,18 @@ class _AppointmentsState extends State<Appointments> {
                   Container(
                       width: 42.w,
                       height: 42.h,
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(8),
+                      decoration: const BoxDecoration(
                           color: silverColor, shape: BoxShape.circle),
-                      child: SvgIcon("assets/icons/notification-icon.svg")),
+                      child:
+                          const SvgIcon("assets/icons/notification-icon.svg")),
                 ],
               ),
               TextFormField(
                 decoration: InputDecoration(
                     fillColor: silverColor,
                     filled: true,
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.search,
                       size: 30,
                       color: darkpurpleColor,
@@ -60,7 +61,7 @@ class _AppointmentsState extends State<Appointments> {
                       borderRadius: BorderRadius.circular(29.r),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: silverColor),
+                        borderSide: const BorderSide(color: silverColor),
                         borderRadius: BorderRadius.circular(29.r))),
               ),
               SizedBox(
@@ -70,7 +71,7 @@ class _AppointmentsState extends State<Appointments> {
                 padding: EdgeInsets.symmetric(horizontal: 9.w, vertical: 22.h),
                 child: Container(
                   height: 150.h,
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   width: 335.w,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.r),
@@ -79,7 +80,8 @@ class _AppointmentsState extends State<Appointments> {
                           color: Colors.grey.withOpacity(0.1),
                           spreadRadius: 5,
                           blurRadius: 7,
-                          offset: Offset(3, 3), // changes position of shadow
+                          offset:
+                              const Offset(3, 3), // changes position of shadow
                         ),
                       ],
                       color: whiteColor),
@@ -107,14 +109,14 @@ class _AppointmentsState extends State<Appointments> {
                               ),
                             ],
                           ),
-                          SvgIcon("assets/icons/menu-icon.svg")
+                          const SvgIcon("assets/icons/menu-icon.svg")
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         color: silverColor,
                       ),
                       ListTile(
-                          leading: CircleAvatar(
+                          leading: const CircleAvatar(
                             backgroundImage: AssetImage(
                               "assets/images/doctor-nirmala.png",
                             ),
@@ -135,7 +137,7 @@ class _AppointmentsState extends State<Appointments> {
                           ),
                           trailing: InkWell(
                             onTap: () {
-                              Get.to(() => BookingConfirmation());
+                              Get.to(() => const BookingConfirmation());
                             },
                             child: SvgIcon(
                               "assets/icons/forward-icon.svg",
@@ -149,7 +151,7 @@ class _AppointmentsState extends State<Appointments> {
               ),
               Container(
                 height: 150.h,
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 width: 335.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.r),
@@ -158,7 +160,8 @@ class _AppointmentsState extends State<Appointments> {
                         color: Colors.grey.withOpacity(0.1),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(3, 3), // changes position of shadow
+                        offset:
+                            const Offset(3, 3), // changes position of shadow
                       ),
                     ],
                     color: whiteColor),
@@ -186,14 +189,14 @@ class _AppointmentsState extends State<Appointments> {
                             ),
                           ],
                         ),
-                        SvgIcon("assets/icons/menu-icon.svg")
+                        const SvgIcon("assets/icons/menu-icon.svg")
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       color: silverColor,
                     ),
                     ListTile(
-                        leading: CircleAvatar(
+                        leading: const CircleAvatar(
                           backgroundImage: AssetImage(
                             "assets/images/doctor-dani.png",
                           ),

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:healthcare/constant/colors_const.dart';
 import 'package:healthcare/views/screen/splash_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
             ),
-            home: SplashScreen());
+            home: const SplashScreen());
       },
     );
   }

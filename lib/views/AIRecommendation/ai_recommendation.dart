@@ -64,18 +64,19 @@ class _AiRecommendationState extends State<AiRecommendation> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundImage: AssetImage("assets/images/patient.png"),
                     ),
                     Container(
                       width: 42.w,
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       height: 42.h,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border(),
                           color: silverColor),
-                      child: SvgIcon("assets/icons/notification-icon.svg"),
+                      child:
+                          const SvgIcon("assets/icons/notification-icon.svg"),
                     )
                   ],
                 ),
@@ -125,7 +126,7 @@ class _AiRecommendationState extends State<AiRecommendation> {
                   : Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12.w),
                       child: TextFormField(
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                         // controller: SearchController(),
                         onChanged: (value) {
                           skills.value = backupSkills;
@@ -138,7 +139,7 @@ class _AiRecommendationState extends State<AiRecommendation> {
                         },
 
                         decoration: InputDecoration(
-                            prefixIcon: Icon(
+                            prefixIcon: const Icon(
                               Icons.search,
                               color: textColor,
                             ),
@@ -164,7 +165,7 @@ class _AiRecommendationState extends State<AiRecommendation> {
                                   value: skills[index]["isCheck"] as bool,
                                   onChanged: (newbool) {
                                     print(newbool!);
-                                    skills[index]["isCheck"] = newbool!;
+                                    skills[index]["isCheck"] = newbool;
 
                                     ///check here ....
                                     if (storeDiease
@@ -179,7 +180,7 @@ class _AiRecommendationState extends State<AiRecommendation> {
                                   })));
                         },
                         separatorBuilder: (context, index) {
-                          return Divider(
+                          return const Divider(
                             color: silverColor,
                           );
                         }),
@@ -194,7 +195,7 @@ class _AiRecommendationState extends State<AiRecommendation> {
         child: CustomButton(
             text: "Submit symptom",
             onPressed: () {
-              Get.to(PredictedDiease());
+              Get.to(const PredictedDiease());
             }),
       ),
     );

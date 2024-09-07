@@ -43,7 +43,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
                     onPressed: () {
                       Get.back();
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                       size: 32,
                     )),
@@ -57,7 +57,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
                       fontSize: 24.sp,
                       fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 57,
                 ),
                 Text(
@@ -84,7 +84,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
                             fontSize: 14.sp,
                             color: greyColor,
                             fontWeight: FontWeight.w400),
-                        prefixIcon: Icon(Icons.search)),
+                        prefixIcon: const Icon(Icons.search)),
                   ),
                 ),
                 SizedBox(
@@ -93,7 +93,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
                 SizedBox(
                   height: 544.h,
                   child: ListView.separated(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: listOfDiease.length,
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
@@ -108,7 +108,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return Divider(
+                      return const Divider(
                         color: silverColor,
                       );
                     },
@@ -124,7 +124,7 @@ class _BookingStepThreeState extends State<BookingStepThree> {
         child: CustomButton(
             text: "Continue",
             onPressed: () {
-              Get.to(() => BookingStepFour());
+              Get.to(() => const BookingStepFour());
             }),
       ),
     );

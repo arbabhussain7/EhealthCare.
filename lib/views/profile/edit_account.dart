@@ -39,7 +39,7 @@ class _EditAccountState extends State<EditAccount> {
                             onTap: () {
                               Get.back();
                             },
-                            child: Icon(Icons.arrow_back_ios)),
+                            child: const Icon(Icons.arrow_back_ios)),
                         Text(
                           "Edit Account",
                           style: GoogleFonts.montserrat(
@@ -47,7 +47,7 @@ class _EditAccountState extends State<EditAccount> {
                               fontWeight: FontWeight.w700,
                               color: textColor),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_back_ios,
                           color: Colors.transparent,
                         )
@@ -66,35 +66,35 @@ class _EditAccountState extends State<EditAccount> {
                 SizedBox(
                   height: 22.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                   text: "Ehealthcare Id",
                   inputtext: TextInputType.number,
                 ),
                 SizedBox(
                   height: 15.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                   text: "Username",
                   inputtext: TextInputType.text,
                 ),
                 SizedBox(
                   height: 15.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                   text: "First Name",
                   inputtext: TextInputType.text,
                 ),
                 SizedBox(
                   height: 15.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                   text: "Last Name",
                   inputtext: TextInputType.text,
                 ),
                 SizedBox(
                   height: 15.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                   text: "Date of Birth",
                   inputtext: TextInputType.text,
                 ),
@@ -118,7 +118,7 @@ class _EditAccountState extends State<EditAccount> {
                             child: RadioListTile(
                               value: 0,
                               groupValue: _groupValue,
-                              title: Text("Male"),
+                              title: const Text("Male"),
                               onChanged: (newValue) =>
                                   setState(() => _groupValue = newValue!),
                               activeColor: cyanColor,
@@ -130,7 +130,7 @@ class _EditAccountState extends State<EditAccount> {
                             child: RadioListTile(
                               value: 1,
                               groupValue: _groupValue,
-                              title: Text("Female"),
+                              title: const Text("Female"),
                               onChanged: (newValue) =>
                                   setState(() => _groupValue = newValue!),
                               activeColor: cyanColor,
@@ -152,28 +152,29 @@ class _EditAccountState extends State<EditAccount> {
                         color: greyColor),
                   ),
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                     text: "Type your phone number",
                     inputtext: TextInputType.number),
                 SizedBox(
                   height: 22.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                     text: "Type your email",
                     inputtext: TextInputType.emailAddress),
                 SizedBox(
                   height: 22.h,
                 ),
-                ProfileTextField(text: "City", inputtext: TextInputType.text),
+                const ProfileTextField(
+                    text: "City", inputtext: TextInputType.text),
                 SizedBox(
                   height: 22.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                     text: "Province", inputtext: TextInputType.text),
                 SizedBox(
                   height: 22.h,
                 ),
-                ProfileTextField(
+                const ProfileTextField(
                     text: "Address", inputtext: TextInputType.text),
                 SizedBox(
                   height: 22.h,
@@ -188,7 +189,7 @@ class _EditAccountState extends State<EditAccount> {
         child: CustomButton(
             text: "Save Changes",
             onPressed: () {
-              Get.offAll(() => ProfileScreen());
+              Get.offAll(() => const ProfileScreen());
             }),
       ),
     );

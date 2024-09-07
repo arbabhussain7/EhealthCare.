@@ -26,7 +26,7 @@ class _homeScreenState extends State<homeScreen> {
               Container(
                 width: 372.w,
                 height: 342.h,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment.topRight,
                         end: Alignment.bottomRight,
@@ -39,20 +39,20 @@ class _homeScreenState extends State<homeScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CircleAvatar(
+                          const CircleAvatar(
                             backgroundImage:
                                 AssetImage("assets/images/patient.png"),
                           ),
                           Container(
                             width: 42.w,
-                            padding: EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(8),
                             height: 42.h,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border(),
                                 color: whiteColor),
-                            child:
-                                SvgIcon("assets/icons/notification-icon.svg"),
+                            child: const SvgIcon(
+                                "assets/icons/notification-icon.svg"),
                           )
                         ],
                       ),
@@ -102,16 +102,16 @@ class _homeScreenState extends State<homeScreen> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: 154, left: 92),
+                          padding: const EdgeInsets.only(top: 154, left: 92),
                           child: InkWell(
                             onTap: () {
-                              Get.to(() => Bookingstepone());
+                              Get.to(() => const Bookingstepone());
                             },
                             child: Container(
                               width: 146.w,
                               height: 48.h,
                               decoration: BoxDecoration(
-                                  gradient: LinearGradient(
+                                  gradient: const LinearGradient(
                                     colors: [
                                       buttongredientcyan,
                                       buttongredientscyan,
@@ -121,13 +121,13 @@ class _homeScreenState extends State<homeScreen> {
                                   borderRadius: BorderRadius.circular(32.r)),
                               child: TextButton(
                                 onPressed: () {
-                                  Get.to(() => Bookingstepone());
+                                  Get.to(() => const Bookingstepone());
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    SvgIcon(
+                                    const SvgIcon(
                                       "assets/icons/button-diamond-icon.svg",
                                       color: whiteColor,
                                       width: 20,
@@ -180,7 +180,7 @@ class _homeScreenState extends State<homeScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => Bookingstepone());
+                              Get.to(() => const Bookingstepone());
                             },
                             child: Column(
                               children: [
@@ -284,7 +284,7 @@ class _homeScreenState extends State<homeScreen> {
                       padding: EdgeInsets.symmetric(horizontal: 22.w),
                       child: Container(
                         height: 150.h,
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         width: 335.w,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12.r),
@@ -293,8 +293,8 @@ class _homeScreenState extends State<homeScreen> {
                                 color: Colors.grey.withOpacity(0.1),
                                 spreadRadius: 5,
                                 blurRadius: 7,
-                                offset:
-                                    Offset(3, 3), // changes position of shadow
+                                offset: const Offset(
+                                    3, 3), // changes position of shadow
                               ),
                             ],
                             color: whiteColor),
@@ -322,14 +322,14 @@ class _homeScreenState extends State<homeScreen> {
                                     ),
                                   ],
                                 ),
-                                SvgIcon("assets/icons/menu-icon.svg")
+                                const SvgIcon("assets/icons/menu-icon.svg")
                               ],
                             ),
-                            Divider(
+                            const Divider(
                               color: silverColor,
                             ),
                             ListTile(
-                                leading: CircleAvatar(
+                                leading: const CircleAvatar(
                                   backgroundImage: AssetImage(
                                     "assets/images/doctor-nirmala.png",
                                   ),
@@ -350,7 +350,7 @@ class _homeScreenState extends State<homeScreen> {
                                 ),
                                 trailing: InkWell(
                                   onTap: () {
-                                    Get.to(() => BookingConfirmation());
+                                    Get.to(() => const BookingConfirmation());
                                   },
                                   child: SvgIcon(
                                     "assets/icons/forward-icon.svg",

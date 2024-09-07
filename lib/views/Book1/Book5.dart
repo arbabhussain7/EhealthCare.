@@ -62,12 +62,12 @@ class _BookingStepFiveState extends State<BookingStepFive> {
                 leading: Container(
                     width: 42.w,
                     height: 42.h,
-                    padding: EdgeInsets.all(6.0),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(6.0),
+                    decoration: const BoxDecoration(
                         color: silverColor,
                         // border: Border.all(),
                         shape: BoxShape.circle),
-                    child: SvgIcon("assets/icons/calender-icon.svg")),
+                    child: const SvgIcon("assets/icons/calender-icon.svg")),
                 title: Text(
                   "Date & Time",
                   style: GoogleFonts.urbanist(
@@ -87,7 +87,7 @@ class _BookingStepFiveState extends State<BookingStepFive> {
               SizedBox(
                 height: 12.h,
               ),
-              Divider(
+              const Divider(
                 color: silverColor,
               ),
               SizedBox(
@@ -104,7 +104,7 @@ class _BookingStepFiveState extends State<BookingStepFive> {
                 height: 12.h,
               ),
               ListTile(
-                leading: CircleAvatar(
+                leading: const CircleAvatar(
                   backgroundImage:
                       AssetImage("assets/images/doctor-nirmala.png"),
                 ),
@@ -215,7 +215,7 @@ class _BookingStepFiveState extends State<BookingStepFive> {
               CustomButton(
                   text: "Pay Now",
                   onPressed: () {
-                    Get.to(() => BookingStepSix());
+                    Get.to(() => const BookingStepSix());
                   })
             ],
           ),

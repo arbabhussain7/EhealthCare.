@@ -39,7 +39,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               boxShadow: [
                 BoxShadow(
                     color: greyColor.withOpacity(0.3),
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                     blurRadius: 10)
               ]),
           child: Padding(
@@ -71,7 +71,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                   color: cyanColor,
                                   borderRadius: BorderRadius.circular(7.r)),
                             )
-                          : SizedBox(),
+                          : const SizedBox(),
                     ],
                   ),
                 ),
@@ -99,7 +99,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                     color: cyanColor,
                                     borderRadius: BorderRadius.circular(7.r)),
                               )
-                            : SizedBox()
+                            : const SizedBox()
                       ],
                     )),
                 InkWell(
@@ -126,7 +126,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                     color: cyanColor,
                                     borderRadius: BorderRadius.circular(7.r)),
                               )
-                            : SizedBox()
+                            : const SizedBox()
                       ],
                     )),
                 InkWell(
@@ -152,7 +152,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                     color: cyanColor,
                                     borderRadius: BorderRadius.circular(7.r)),
                               )
-                            : SizedBox()
+                            : const SizedBox()
                       ],
                     )),
               ],

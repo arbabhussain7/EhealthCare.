@@ -33,7 +33,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                             onTap: () {
                               Get.back();
                             },
-                            child: Icon(Icons.arrow_back_ios)),
+                            child: const Icon(Icons.arrow_back_ios)),
                         Text(
                           "Privacy Policy",
                           style: GoogleFonts.urbanist(
@@ -41,7 +41,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                               fontWeight: FontWeight.w700,
                               color: textColor),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_back_ios,
                           color: Colors.transparent,
                         )

@@ -32,14 +32,14 @@ class _ResetPasswordState extends State<ResetPassword> {
                     onPressed: () {
                       Get.back();
                     },
-                    icon: Icon(Icons.arrow_back_ios),
+                    icon: const Icon(Icons.arrow_back_ios),
                   )),
                 ),
                 SizedBox(
                   height: 22.h,
                 ),
                 Container(
-                  child: Text(
+                  child: const Text(
                     "New Password",
                     style: TextStyle(
                         fontSize: 24,
@@ -51,7 +51,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   height: 12.h,
                 ),
                 Container(
-                  child: Text(
+                  child: const Text(
                     "Create a new password that is safe and easy to remember",
                     style: TextStyle(
                         fontSize: 16, color: Color.fromRGBO(177, 177, 177, 1)),
@@ -63,18 +63,18 @@ class _ResetPasswordState extends State<ResetPassword> {
                 CustomTextfield(
                   text: "New Password",
                   controller: passwordController,
-                  prefixIcons: Icon(Icons.lock_outline),
+                  prefixIcons: const Icon(Icons.lock_outline),
                 ),
                 CustomTextfield(
                     text: "Confirm New Password",
-                    prefixIcons: Icon(Icons.lock_outline),
+                    prefixIcons: const Icon(Icons.lock_outline),
                     controller: confirmpasswordController),
               ],
             ),
             CustomButton(
                 text: "Continue",
                 onPressed: () {
-                  Get.to(() => PasswordVerify());
+                  Get.to(() => const PasswordVerify());
                 })
           ],
         ),

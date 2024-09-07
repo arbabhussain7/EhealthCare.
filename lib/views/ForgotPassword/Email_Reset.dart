@@ -32,14 +32,14 @@ class _EmailResendState extends State<EmailResend> {
                     onPressed: () {
                       Get.back();
                     },
-                    icon: Icon(Icons.arrow_back_ios),
+                    icon: const Icon(Icons.arrow_back_ios),
                   )),
                 ),
                 SizedBox(
                   height: 22.h,
                 ),
                 Container(
-                  child: Text(
+                  child: const Text(
                     "Reset Password",
                     style: TextStyle(
                         fontSize: 24,
@@ -51,7 +51,7 @@ class _EmailResendState extends State<EmailResend> {
                   height: 12.h,
                 ),
                 Container(
-                  child: Text(
+                  child: const Text(
                     "Enter your email, we will send a verification code to email",
                     style: TextStyle(
                         fontSize: 16, color: Color.fromRGBO(177, 177, 177, 1)),
@@ -63,14 +63,14 @@ class _EmailResendState extends State<EmailResend> {
                 CustomTextfield(
                   text: "Type your email ",
                   controller: emailController,
-                  prefixIcons: Icon(Icons.email_outlined),
+                  prefixIcons: const Icon(Icons.email_outlined),
                 ),
               ],
             ),
             CustomButton(
                 text: "Send Code",
                 onPressed: () {
-                  Get.to(() => EmailOTP());
+                  Get.to(() => const EmailOTP());
                 })
           ],
         ),
