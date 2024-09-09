@@ -15,323 +15,206 @@ class BookingStepTwo extends StatefulWidget {
 }
 
 class _BookingStepTwoState extends State<BookingStepTwo> {
+  DateTime? selectedDay; // Nullable DateTime for selected date
+  String? selectedTime; // Nullable string to store the selected time
+
+  // List of available times
+  final List<String> morningTimes = [
+    "08:00 AM",
+    "08:30 AM",
+    "09:00 AM",
+    "09:30 AM",
+    "10:00 AM",
+    "10:30 AM"
+  ];
+  final List<String> nightTimes = [
+    "08:00 pM",
+    "08:30 pM",
+    "09:00 pM",
+    "09:30 pM",
+    "10:00 pM",
+    "10:30 pM"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              IconButton(
-                  onPressed: () {},
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    // Add navigation logic here if necessary
+                  },
                   icon: const Icon(
                     Icons.arrow_back_ios,
                     color: blackColor,
-                  )),
-              SizedBox(
-                height: 12.h,
-              ),
-              Text(
-                "Booking Appointment",
-                style: GoogleFonts.urbanist(
+                  ),
+                ),
+                SizedBox(height: 12.h),
+                Text(
+                  "Booking Appointment",
+                  style: GoogleFonts.urbanist(
                     fontSize: 24.sp,
                     fontWeight: FontWeight.w700,
-                    color: blackColor),
-              ),
-              SizedBox(
-                height: 72.h,
-              ),
-              Text(
-                "Select Schedule",
-                style: GoogleFonts.urbanist(
+                    color: blackColor,
+                  ),
+                ),
+                SizedBox(height: 72.h),
+                Text(
+                  "Select Schedule",
+                  style: GoogleFonts.urbanist(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
-                    color: textColor),
-              ),
-              EasyDateTimeLine(
-                initialDate: DateTime.now(),
-                activeColor: cyanColor,
-                headerProps: const EasyHeaderProps(
-                  showHeader: true,
-                  centerHeader: false,
-                  showSelectedDate: false,
-                  showMonthPicker: false,
-                ),
-                dayProps: const EasyDayProps(
-                  width: 56.0,
-                  height: 93.0,
-                  activeDayStyle: DayStyle(
-                    borderRadius: 32.0,
-                  ),
-                  inactiveDayStyle: DayStyle(
-                    borderRadius: 32.0,
+                    color: textColor,
                   ),
                 ),
-                timeLineProps: const EasyTimeLineProps(
-                  hPadding: 16.0, // padding from left and right
-                  separatorPadding: 10.0, // padding between days
+                // Corrected Timeline Widget with the right callback signature
+                EasyDateTimeLine(
+                  initialDate: DateTime.now(),
+                  activeColor: cyanColor,
+                  onDateChange: (date) {
+                    // This callback only accepts a DateTime parameter
+                    setState(() {
+                      selectedDay = date; // Update selected date
+                    });
+                  },
+                  headerProps: const EasyHeaderProps(
+                    showHeader: true,
+                    centerHeader: false,
+                    showSelectedDate: false,
+                    showMonthPicker: false,
+                  ),
+                  dayProps: const EasyDayProps(
+                    width: 56.0,
+                    height: 93.0,
+                    activeDayStyle: DayStyle(
+                      borderRadius: 32.0,
+                    ),
+                    inactiveDayStyle: DayStyle(
+                      borderRadius: 32.0,
+                    ),
+                  ),
+                  timeLineProps: const EasyTimeLineProps(
+                    hPadding: 16.0, // padding from left and right
+                    separatorPadding: 10.0, // padding between days
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              const Divider(
-                endIndent: 8,
-                color: silverColor,
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              Text(
-                "Morning",
-                style: GoogleFonts.urbanist(
+                SizedBox(height: 12.h),
+                const Divider(endIndent: 8, color: silverColor),
+                SizedBox(height: 12.h),
+                Text(
+                  "Morning",
+                  style: GoogleFonts.urbanist(
                     fontSize: 12.sp,
                     color: greyColor,
-                    fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 18.h,
-              ),
-              Wrap(
-                runSpacing: 12,
-                spacing: 12,
-                children: [
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "08:00 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
+                    fontWeight: FontWeight.w600,
                   ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "08:30 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
+                ),
+                SizedBox(height: 18.h),
+                Wrap(
+                  runSpacing: 12,
+                  spacing: 12,
+                  children: morningTimes.map((time) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedTime = time; // Update selected time
+                        });
+                      },
+                      child: Container(
+                        width: 101.w,
+                        height: 40.h,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: silverColor),
+                          borderRadius: BorderRadiusDirectional.circular(22.r),
+                          color: selectedTime == time
+                              ? cyanColor
+                              : Colors.transparent,
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            time,
+                            style: GoogleFonts.urbanist(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              color: selectedTime == time
+                                  ? Colors.white
+                                  : textColor,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "09:00 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "09:30 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "10:00 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "10:30 AM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 22.h,
-              ),
-              Text(
-                "Night",
-                style: GoogleFonts.urbanist(
+                    );
+                  }).toList(),
+                ),
+                SizedBox(height: 12.h),
+                const Divider(endIndent: 8, color: silverColor),
+                SizedBox(height: 12.h),
+                Text(
+                  "Night",
+                  style: GoogleFonts.urbanist(
                     fontSize: 12.sp,
                     color: greyColor,
-                    fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 18.h,
-              ),
-              Wrap(
-                runSpacing: 12,
-                spacing: 12,
-                children: [
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "08:00 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
+                    fontWeight: FontWeight.w600,
                   ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "08:30 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
+                ),
+                SizedBox(height: 18.h),
+                Wrap(
+                  runSpacing: 12,
+                  spacing: 12,
+                  children: nightTimes.map((time) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedTime = time; // Update selected time
+                        });
+                      },
+                      child: Container(
+                        width: 101.w,
+                        height: 40.h,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: silverColor),
+                          borderRadius: BorderRadiusDirectional.circular(22.r),
+                          color: selectedTime == time
+                              ? cyanColor
+                              : Colors.transparent,
+                        ),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            time,
+                            style: GoogleFonts.urbanist(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              color: selectedTime == time
+                                  ? Colors.white
+                                  : textColor,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "09:00 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "09:30 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "10:00 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 101.w,
-                    height: 40.h,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: silverColor),
-                        borderRadius: BorderRadiusDirectional.circular(22.r)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "10:30 PM",
-                        style: GoogleFonts.urbanist(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: textColor),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 140.h,
-              ),
-              CustomButton(
+                    );
+                  }).toList(),
+                ),
+                SizedBox(height: 120.h),
+                // Continue button logic
+                CustomButton(
                   text: "Continue",
-                  onPressed: () {
-                    Get.to(() => const BookingStepThree());
-                  })
-            ],
+                  onPressed: (selectedDay != null && selectedTime != null)
+                      ? () {
+                          // Navigate to the next step if both day and time are selected
+                          Get.to(() => const BookingStepThree());
+                        }
+                      : () {}, // Provide a no-op function if both are not selected
+                ),
+              ],
+            ),
           ),
         ),
       ),
